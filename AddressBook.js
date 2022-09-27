@@ -186,7 +186,15 @@ function viewContactsByCity(city){
 
 function viewContactsByState(state){
     return addressBookArray.filter((contact) => contact.state == state);
-}  
+}
+
+function getCountOfContactsByCity(city){
+    return addressBookArray.filter((contact) => contact.city == city).length;
+}
+
+function getCountOfContactsByState(state){
+    return addressBookArray.filter((contact) => contact.state == state).length;
+}
 
 let firstContact = new Contact("Thomas", "Edison", "Esplanade", "Kolkata", "WestBengal", 700001, "91 1234567890", "thomas@gmail.com");
 let secondContact = new Contact("Robert", "Bosch", "Raigad", "Mumbai", "Maharastra", "400001", "91 9876543210", "robert@gmail.com");
@@ -237,3 +245,6 @@ console.log(viewContactsByCity("Kolkata"));
 
 console.log("\nView Contacts By State : Maharastra\n" );
 console.log(viewContactsByState("Maharastra"));
+
+console.log("\nNumber of Contacts residing in City : Kolkata= " + getCountOfContactsByCity("Kolkata"))
+console.log("\nNumber of Contacts residing in State : Maharastra = " + getCountOfContactsByState("Maharastra"));
