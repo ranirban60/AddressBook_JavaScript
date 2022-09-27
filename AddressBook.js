@@ -115,10 +115,17 @@ class Contact{
     }
 }
 
+let addressBookArray = new Array();
 try{
-let contact = new Contact("Thomas", "Edison", "Esplanade", "Kolkata", "WestBengal", 700001, "91 1234567890", "thomas@gmail.com");
-console.log(contact.toString());
+    addressBookArray.push(new Contact("Thomas", "Edison", "Esplanade", "Kolkata", "WestBengal", 700001, "91 1234567890", "thomas@gmail.com"));
 }
 catch(e){
     console.log(e);
 }
+
+try{
+    addressBookArray.push(new Contact("Robert", "Bosch", "Raigad", "Mumbai", "Maharastra", "400001", "91 9876543210", "robert@gmail.com"));
+}catch(e){
+    console.error(e);
+}
+console.log(addressBookArray);
