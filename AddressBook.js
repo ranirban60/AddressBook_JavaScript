@@ -180,13 +180,6 @@ function searchContactByState(state) {
     return addressBookArray.filter((contact) => contact.state == state);
   }
   
-function viewContactsByCity(city){
-    return addressBookArray.filter((contact) => contact.city == city);
-}
-
-function viewContactsByState(state){
-    return addressBookArray.filter((contact) => contact.state == state);
-}  
 
 let firstContact = new Contact("Thomas", "Edison", "Esplanade", "Kolkata", "WestBengal", 700001, "91 1234567890", "thomas@gmail.com");
 let secondContact = new Contact("Robert", "Bosch", "Raigad", "Mumbai", "Maharastra", "400001", "91 9876543210", "robert@gmail.com");
